@@ -1,0 +1,13 @@
+.ropeproject
+venv/
+venv[[:digit:]]/
+.vagrant/
+.idea/
+build/
+dist/
+
+*.egg-info/
+*.py[co]
+*.DS_Store
+.*.sw[a-z]
+.tmp.*

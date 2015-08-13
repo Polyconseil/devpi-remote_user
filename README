@@ -1,0 +1,4 @@
+devpi-server plugin
+
+- Accept requests based on the REMOTE_USER header (provided by nginx for example)
+- Do not check any credential and give the user the 'remote_user' group.

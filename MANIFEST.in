@@ -1,0 +1,6 @@
+include LICENSE README
+
+graft devpi_remote_user
+
+global-exclude *.py[cod] __pycache__
+global-exclude .*.swp *.*~
