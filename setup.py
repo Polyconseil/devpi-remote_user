@@ -7,6 +7,7 @@ setup(
     version='0.1',
     author="Autolib' dev team",
     author_email="autolib-dev@polyconseil.fr",
+    url="https://github.com/Polyconseil/devpi-remote_user",
     license="MIT",
     keywords="devpi plugin",
     entry_points={
