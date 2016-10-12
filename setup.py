@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 setup(
     name="devpi-remote_user",
     description=open('README').read(),
-    version='0.1',
+    version='0.2',
     author="Polyconseil",
     author_email="opensource+devpi-remote_user@polyconseil.fr",
     url="https://github.com/Polyconseil/devpi-remote_user",

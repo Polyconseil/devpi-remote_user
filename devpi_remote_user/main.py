@@ -2,17 +2,17 @@ from devpi_server.log import threadlog
 
 
 def devpiserver_get_credentials(request):
-    """Search request for REMOTE_USER header.
+    """Search request for X-Remote-User header.
 
-    Returns a tuple with (REMOTE_USER, '') if credentials could be
+    Returns a tuple with (X-Remote-User, '') if credentials could be
     extracted, or None if no credentials were found.
 
     The first plugin to return credentials is used, the order of plugin
     calls is undefined.
     """
-    if 'REMOTE_USER' in request.headers:
-        remote_user = request.headers['REMOTE_USER']
-        threadlog.info("Found REMOTE_USER in request: %s", remote_user)
+    if 'X-Remote-User' in request.headers:
+        remote_user = request.headers['X-Remote-User']
+        threadlog.info("Found X-Remote-User in request: %s", remote_user)
         return remote_user, ''
 
 
