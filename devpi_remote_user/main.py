@@ -1,6 +1,10 @@
 from devpi_server.log import threadlog
+from pluggy import HookimplMarker
+
+server_hookimpl = HookimplMarker("devpiserver")
 
 
+@server_hookimpl
 def devpiserver_get_credentials(request):
     """Search request for X-Remote-User header.
 
@@ -16,6 +20,7 @@ def devpiserver_get_credentials(request):
         return remote_user, ''
 
 
+@server_hookimpl
 def devpiserver_auth_user(userdict, username, password):
     """Since we accept all remote_user, no password checks are needed."""
     threadlog.info("devpi-remoteuser accepting user: %s", username)
